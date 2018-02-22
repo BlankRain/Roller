@@ -1,6 +1,6 @@
 const Roller = require('./roller.js')
-function hello(arg1) {
-    console.log('call hello', arg1)
+function hello(params) {
+    console.log('call hello')
     return "hello call"
 }
 function world(params) {
@@ -10,3 +10,6 @@ function world(params) {
 
 var x = new Roller()
 x.start(hello).to(world).build().listen(3000)
+
+var y = new Roller()
+y.start(world).to(hello).build().listen(4000)
